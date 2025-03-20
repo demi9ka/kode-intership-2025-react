@@ -8,12 +8,16 @@
 }
 
 * {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    background-color: initial;
     font-family: Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 400;
     color-scheme: light dark;
     color: var(--text-400);
-    background-color: var(--bg-400);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
