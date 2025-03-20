@@ -1,0 +1,13 @@
+.wrapper {
+    padding: 0 16px;
+    width: 100%;
+    border-bottom: 1px solid var(--bg-500);
+}
+.wrapper ul {
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+}
