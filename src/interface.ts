@@ -14,3 +14,4 @@ export interface UserType {
     birthday: string
     phone: string
 }
+export type FilterType = 'default' | 'date'
