@@ -1,0 +1,53 @@
+.wrapper {
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #f3f3f6;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+}
+.top {
+    width: 144px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: #f3f3f6;
+}
+.bottom {
+    width: 80px;
+    height: 12px;
+    border-radius: 50px;
+    background-color: #f3f3f6;
+}
+.skeleton {
+    position: relative;
+    overflow: hidden;
+}
+.skeleton::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(to right, transparent 0%, #e8e8e8 50%, transparent 100%);
+    animation: load 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}

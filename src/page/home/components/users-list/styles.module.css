@@ -1,0 +1,25 @@
+.wrapper {
+    padding: 16px 0;
+    flex-grow: 2;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.warning_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.reload_btn {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ui);
+    cursor: pointer;
+}
+.error_text {
+    font-size: 16px;
+    color: var(--text-200);
+}
