@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
     --bg-400: #ffffff;
     --bg-500: #f7f7f8;
     --text-400: #050510;
-    --text-300: #97979b;
+    --text-300: #55555c;
+    --text-200: #97979b;
     --ui: #6534ff;
     --error: #f44336;
 }
@@ -13,9 +16,11 @@
     outline: 0;
     border: 0;
     background-color: initial;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
+    font-style: normal;
+    line-height: 1;
     color-scheme: light dark;
     color: var(--text-400);
     font-synthesis: none;
