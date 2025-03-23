@@ -44,7 +44,8 @@ class Appstore {
     loadColorTheme = () => {
         let theme = localStorage.getItem('theme')
         if (!theme) {
-            localStorage.setItem('theme', 'light')
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+            localStorage.setItem('theme', darkModeMediaQuery ? 'dark' : 'light')
             theme = 'light'
         }
         this.setColorTheme(theme)
