@@ -11,14 +11,14 @@ import { SortBirthday } from '@/utils/sort-birthday'
 import { sortDefault } from '@/utils/sort-default'
 
 export const UsersList = observer(() => {
-    const { loadUserList, users_list } = UserStore
+    const { loadUserList, users_list, setExample } = UserStore
     const { load_error, filter } = AppStore
     const [searchParams] = useSearchParams()
 
     // Получаем значение параметра example
     const example_value = searchParams.get('example')
     useEffect(() => {
-        loadUserList(example_value)
+        setExample(example_value)
     }, [example_value])
 
     if (load_error) {
@@ -26,7 +26,7 @@ export const UsersList = observer(() => {
             <Warning icon="/load-users-error-icon.png" title="Какой-то сверхразум все сломал">
                 <div className={css.warning_wrapper}>
                     <p className={css.error_text}>Постараемся быстро починить</p>
-                    <button className={css.reload_btn} onClick={() => loadUserList(example_value)}>
+                    <button className={css.reload_btn} onClick={loadUserList}>
                         Попробовать снова
                     </button>
                 </div>

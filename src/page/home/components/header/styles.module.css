@@ -1,6 +1,22 @@
 .header {
     width: 100%;
 }
+.header.error {
+    background-color: var(--error);
+}
+.header.error .title,
+.header.reconnect .title {
+    color: var(--bg-400);
+}
+.header.reconnect {
+    background-color: var(--ui);
+}
+.message {
+    padding: 6px 24px 20px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bg-400);
+}
 .title {
     font-weight: 700;
     padding: 12px 24px;

@@ -16,7 +16,7 @@ export const User = observer(() => {
 
     useEffect(() => {
         if (!users_list) {
-            loadUserList(null)
+            loadUserList()
         } else {
             const crnt_user = users_list.find(el => el.id === String(user_id))
             if (!crnt_user) return
