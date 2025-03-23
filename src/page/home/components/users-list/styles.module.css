@@ -23,3 +23,28 @@
     font-size: 16px;
     color: var(--text-200);
 }
+.year_line {
+    margin: 28px 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.year {
+    width: 160px;
+    background-color: var(--bg-400);
+    color: var(--text-200);
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 4;
+    text-align: center;
+}
+.year_line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #c3c3c6;
+    z-index: 3;
+}

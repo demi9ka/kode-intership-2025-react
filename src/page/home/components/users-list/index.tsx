@@ -7,10 +7,12 @@ import { Warning } from '@/ui/warning'
 import { Skeleton } from '@/ui/skeleton'
 import { Item } from './item'
 import AppStore from '@/store/AppStore'
+import { SortBithday } from '@/utils/sort-bithday'
+import { sortDefault } from '@/utils/sort-default'
 
 export const UsersList = observer(() => {
     const { loadUserList, users_list } = UserStore
-    const { load_error } = AppStore
+    const { load_error, filter } = AppStore
     const [searchParams] = useSearchParams()
 
     // Получаем значение параметра example
@@ -49,5 +51,46 @@ export const UsersList = observer(() => {
             </Warning>
         )
     }
-    return <div className={css.wrapper}>{users_list ? users_list.map(el => <Item key={`user_${el.id}`} {...el} />) : [1, 2, 3, 4, 5, 6, 7].map(i => <Skeleton key={`skeleton_${i}`} />)}</div>
+    if (!users_list) {
+        return (
+            <div className={css.wrapper}>
+                {[1, 2, 3, 4, 5, 6, 7].map(i => (
+                    <Skeleton key={`skeleton_${i}`} />
+                ))}
+            </div>
+        )
+    }
+    if (filter == 'default') {
+        const users_list_sort = sortDefault(users_list)
+        return (
+            <div className={css.wrapper}>
+                {users_list_sort.map(el => (
+                    <Item key={`user_${el.id}`} {...el} />
+                ))}
+            </div>
+        )
+    }
+    if (filter == 'date') {
+        const [crnt_year_users, next_year_users] = SortBithday(users_list)
+        const next_year = new Date().getFullYear()
+        return (
+            <div className={css.wrapper}>
+                {crnt_year_users.map(el => (
+                    <Item key={`user_${el.id}`} {...el} />
+                ))}
+                {next_year_users.length ? (
+                    <>
+                        <div className={css.year_line}>
+                            <p className={css.year}>{next_year}</p>
+                        </div>
+                        {next_year_users.map(el => (
+                            <Item key={`user_${el.id}`} {...el} />
+                        ))}
+                    </>
+                ) : (
+                    ''
+                )}
+            </div>
+        )
+    }
 })
