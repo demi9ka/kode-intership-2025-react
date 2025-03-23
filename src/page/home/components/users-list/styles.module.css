@@ -48,3 +48,12 @@
     background-color: #c3c3c6;
     z-index: 3;
 }
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 8px 0;
+        gap: 2px;
+    }
+    .title {
+        padding: 8px 24px;
+    }
+}

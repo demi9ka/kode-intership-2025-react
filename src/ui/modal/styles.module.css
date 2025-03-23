@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     display: flex;
+    z-index: 10;
     justify-content: center;
     align-items: center;
 }
@@ -28,6 +29,7 @@
     display: flex;
     justify-content: center;
     padding: 24px 0;
+    font-weight: 700;
 }
 .close {
     top: 20px;
@@ -37,4 +39,17 @@
 .content {
     flex-grow: 2;
     padding: 0 16px 8px 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+    .close {
+        top: 15px;
+        right: 15px;
+    }
+    .content {
+        padding: 0 16px 4px 16px;
+    }
 }

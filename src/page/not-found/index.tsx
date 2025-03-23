@@ -1,5 +1,5 @@
 import css from './styles.module.css'
 
 export const NotFound = () => {
-    return <h1>Not found</h1>
+    return <h1>Страница не найдена</h1>
 }
