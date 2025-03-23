@@ -4,6 +4,7 @@ import { Image } from '@/ui/image'
 import { useEffect, useState } from 'react'
 import AppStore from '@/store/AppStore'
 import { SortModal } from './components/sort-modal'
+import { ColorTheme } from './components/color-theme'
 
 export const Header = observer(() => {
     const { setSearch, filter, search, connect_status } = AppStore
@@ -27,7 +28,10 @@ export const Header = observer(() => {
         <>
             <SortModal open_modal={open_sort_modal} setOpenModal={setOpenSortModal} />
             <header className={`${css.header} ${connect_status == 1 ? css.error : ''} ${connect_status == 2 ? css.reconnect : ''}`}>
-                <h1 className={css.title}>Поиск</h1>
+                <div className={css.flex}>
+                    <h1 className={css.title}>Поиск</h1>
+                    <ColorTheme />
+                </div>
                 {connect_status == 0 ? (
                     <div className={css.input_wrapper}>
                         <Image width={24} height={24} src="/search.svg" />

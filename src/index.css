@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-:root {
+[data-theme='light'] {
     --bg-400: #ffffff;
     --bg-500: #f7f7f8;
     --text-400: #050510;
@@ -9,6 +9,16 @@
     --ui: #6534ff;
     --error: #f44336;
     --skeleton-bg: #f3f3f6;
+}
+[data-theme='dark'] {
+    --bg-400: #1b1b1b;
+    --bg-500: #161616;
+    --text-400: #ffffff;
+    --text-300: #e6e6e6;
+    --text-200: #b3b3b3;
+    --ui: #6534ff;
+    --error: #f44336;
+    --skeleton-bg: #2c2c2c;
 }
 
 * {

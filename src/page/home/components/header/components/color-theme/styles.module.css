@@ -1,0 +1,47 @@
+.toggle_button {
+    position: relative;
+
+    width: 40px;
+    height: 20px;
+    margin: 0;
+    vertical-align: top;
+    background: var(--bg-500);
+    border: 1px solid var(--ui);
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle_button::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--ui);
+    border-radius: 50%;
+
+    transform: translateX(0);
+
+    transition: all 0.3s ease-in-out;
+}
+.label {
+    font-size: 14px;
+}
+.wrapper {
+    display: flex;
+    gap: 10px;
+}
+.toggle_button:checked::after {
+    transform: translateX(20px);
+    background-color: var(--bg-400);
+}
+
+.toggle_button:checked {
+    background-color: var(--ui);
+}
