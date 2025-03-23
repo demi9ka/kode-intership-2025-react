@@ -29,9 +29,10 @@ class Appstore {
         this.connect_status = status
     }
     setLoadError = (state: boolean) => {
+        //установить статус ошибки при загрузки страницы
         this.load_error = state
     }
-    setSearch = (value: string) => {
+    setSearch = (value: string) => { //утсановить значение поле поиска
         this.search = value
         UserStore.updateUsersList()
     }
