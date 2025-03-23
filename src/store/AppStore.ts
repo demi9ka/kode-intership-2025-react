@@ -38,6 +38,7 @@ class Appstore {
     setFilter = (value: FilterType) => (this.filter = value)
     setColorTheme = (theme: string) => {
         this.color_theme = theme
+        localStorage.setItem('theme', theme)
         document.documentElement.setAttribute('data-theme', theme)
     }
     loadColorTheme = () => {
