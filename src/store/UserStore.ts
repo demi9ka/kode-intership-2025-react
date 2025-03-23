@@ -21,7 +21,6 @@ class UsersStore {
     }
     setPrivateUsersList = (list: UserType[] | null) => {
         this._users_list = list
-
         this.updateUsersList()
     }
     updateUsersList = () => {

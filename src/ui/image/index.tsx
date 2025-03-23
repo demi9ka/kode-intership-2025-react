@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import css from './styles.module.css'
 
 interface ImageType {
@@ -5,13 +6,15 @@ interface ImageType {
     width?: number
     height?: number
     alt?: string
-    clicked?: boolean
+    skeleton?: boolean
 }
 
-export const Image = ({ height, src, width, alt, clicked }: ImageType) => {
+export const Image = ({ height, src, width, alt, skeleton }: ImageType) => {
+    const [is_load, setIsLoad] = useState(false)
     return (
-        <div style={{ width, height, cursor: clicked ? 'pointer' : 'default' }} className={css.image_wrapper}>
-            <img className={css.image} src={src} alt={alt} />
+        <div style={{ width, height }} className={css.image_wrapper}>
+            {!is_load && skeleton ? <div className={css.skeleton} /> : ''}
+            <img className={css.image} style={{ display: !is_load ? 'none' : 'block' }} onLoad={() => setIsLoad(true)} src={src} alt={alt} />
         </div>
     )
 }

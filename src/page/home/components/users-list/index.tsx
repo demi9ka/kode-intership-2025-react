@@ -7,7 +7,7 @@ import { Warning } from '@/ui/warning'
 import { Skeleton } from '@/ui/skeleton'
 import { Item } from './item'
 import AppStore from '@/store/AppStore'
-import { SortBithday } from '@/utils/sort-bithday'
+import { SortBirthday } from '@/utils/sort-birthday'
 import { sortDefault } from '@/utils/sort-default'
 
 export const UsersList = observer(() => {
@@ -71,7 +71,7 @@ export const UsersList = observer(() => {
         )
     }
     if (filter == 'date') {
-        const [crnt_year_users, next_year_users] = SortBithday(users_list)
+        const [crnt_year_users, next_year_users] = SortBirthday(users_list)
         const next_year = new Date().getFullYear()
         return (
             <div className={css.wrapper}>

@@ -1,6 +1,6 @@
 import { UserType } from '@/interface'
 
-export const SortBithday = (users_list: UserType[]): [UserType[], UserType[]] => {
+export const SortBirthday = (users_list: UserType[]): [UserType[], UserType[]] => {
     const today = new Date()
     const currentYear = today.getFullYear()
 

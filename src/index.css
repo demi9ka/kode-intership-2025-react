@@ -8,6 +8,7 @@
     --text-200: #97979b;
     --ui: #6534ff;
     --error: #f44336;
+    --skeleton-bg: #f3f3f6;
 }
 
 * {
@@ -29,4 +30,7 @@
     -moz-osx-font-smoothing: grayscale;
     user-select: none;
     box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-400);
 }

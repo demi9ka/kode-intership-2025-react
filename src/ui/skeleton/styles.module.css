@@ -8,7 +8,7 @@
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background-color: #f3f3f6;
+    background-color: var(--skeleton-bg);
 }
 .flex {
     display: flex;
@@ -20,13 +20,13 @@
     width: 144px;
     height: 16px;
     border-radius: 50px;
-    background-color: #f3f3f6;
+    background-color: var(--skeleton-bg);
 }
 .bottom {
     width: 80px;
     height: 12px;
     border-radius: 50px;
-    background-color: #f3f3f6;
+    background-color: var(--skeleton-bg);
 }
 .skeleton {
     position: relative;
