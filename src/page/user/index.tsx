@@ -16,6 +16,7 @@ export const User = observer(() => {
 
     useEffect(() => {
         if (!users_list) {
+            //Если сайт открыли с этой страницы то нужно заново загрущить пользователкй
             loadUserList()
         } else {
             const crnt_user = users_list.find(el => el.id === String(user_id))
@@ -64,6 +65,7 @@ export const User = observer(() => {
 })
 
 const getAge = (birthday: string) => {
+    //Полученния возраста пользователся
     const date = new Date(birthday).getTime()
     const now = new Date().getTime()
     const age = Math.floor((now - date) / (1000 * 60 * 60 * 24 * 365))

@@ -10,7 +10,7 @@ interface ImageType {
 }
 
 export const Image = ({ height, src, width, alt, skeleton }: ImageType) => {
-    const [is_load, setIsLoad] = useState(false)
+    const [is_load, setIsLoad] = useState(false) //Если картрка не загрузилась то показываем загрузку если включен параметр skeleton
     return (
         <div style={{ width, height }} className={css.image_wrapper}>
             {!is_load && skeleton ? <div className={css.skeleton} /> : ''}

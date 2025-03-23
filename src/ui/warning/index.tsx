@@ -9,6 +9,7 @@ interface WarningType {
 }
 
 export const Warning = ({ children, icon, title }: WarningType) => {
+    //сообщение об ошибке
     return (
         <div className={css.wrapper}>
             <div className={css.content}>

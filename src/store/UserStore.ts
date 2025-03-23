@@ -33,12 +33,14 @@ class UsersStore {
         this.updateUsersList()
     }
     updateUsersList = () => {
+        //Обновляем список пользователй который будет показываться на экране
         if (!this._users_list) return (this.users_list = null)
         const search = AppStore.search.toLowerCase()
         const filter_users_list = this._users_list.filter(({ lastName, firstName, userTag }) => lastName.toLowerCase().includes(search) || firstName.toLowerCase().includes(search) || userTag.toLowerCase().includes(search))
         this.users_list = filter_users_list
     }
     setExample = (example: string | null) => {
+        //устанавливаем _example
         this.example = example
         this.loadUserList()
     }
