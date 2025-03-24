@@ -2,6 +2,8 @@
 
 Что я использую: axios, mobx, react-router
 
+gh-pages: https://demi9ka.github.io/kode-intership-2025-react/
+
 #### План разработки:
 
 1. Сруктура проекта [+]
